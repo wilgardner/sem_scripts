@@ -26,7 +26,7 @@ def Script():
 
     # Scan settings
     MAG_VALUE = None #Magnification - if None, use current magnification
-    USE_ABC = 0 #Whether to use auto brightness and contrast correction (0:OFF, 1:ON)
+    USE_ABC = False #Whether to use auto brightness and contrast correction for each tile
     ABC_MODE = 1 #To which detector image(s) should ABC be applied (0:Single, 1:All)
     CAPTURE_TYPE = 1 #Which detector image(s) to capture (0:Single, 1:All)
     USE_AUTO_FOCUS = True #Whether to use auto focus
@@ -88,7 +88,7 @@ def Script():
         r = EXT.RunStageMove(X=X, Y=Y)
 
         # ABCC
-        if USE_ABC == 1:
+        if USE_ABC:
             r = EXT.RunAutoAbc(Mode=ABC_MODE, Bm=0)
 
         # AFC
