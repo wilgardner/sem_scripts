@@ -1,7 +1,10 @@
 # Hitachi SU7000 Field Emission SEM Scripts
 A collection of scripts for automating scanning electron microscope (SEM) data acquisition. These are designed using the Python API for the Hitachi SU7000 Field Emission SEM. Note that camelCase is used to be consistent with the API style.
 
-## autoMontage: Automated Montage Acquisition
+***
+
+## autoMontage 
+### Automated Montage Acquisition
 This script automates the process of creating stage scan montages using the Hitachi SU7000 Field Emission Scanning Electron Microscope (SEM) through its Python API. It is designed to facilitate large area scans with precise control over imaging parameters and automatic adjustments for focus and astigmatism.
 
 ### Key Features:
@@ -25,6 +28,8 @@ This script automates the process of creating stage scan montages using the Hita
 - Currently the script will only acquire montages in a zig-zag fashion, starting from the BOTTOM LEFT of the montage.
 - The recursive auto focus will move small amounts in the positive X direction at each recursion (if the FOCUS_THRESHOLD is exceeded). Another option would be to use a random walk.
 - The script does not do any stitching of the tiles into a final montage. This can be done using external image processing software.
-- 
 
 This script significantly enhances SEM operation efficiency, enabling extensive area scans with minimal manual intervention while ensuring high-quality imaging through sophisticated autofocus and astigmatism correction algorithms.
+
+***
+
